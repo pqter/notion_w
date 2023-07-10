@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: 'Roboto Mono', monospace;
+			padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
+
+		.navMenu a {
+			color: #272727;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #F3EEEE;
+		}
+
+		.border {
+			border: 0px solid #ffffff;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #c7b087;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  background">
+		<a id="personal" onclick="navigate(this.id)" href="#"> <i class="fa-regular fa-user"></i> Personal</a>
+		<a id="daily planning" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-check"></i> Daily Planning</a>
+		<a id="greek psychology" onclick="navigate(this.id)" href="#"> <i class="fa-regular fa-face-smile"></i> Greek psychology</a>
+		<a id="institute tasks" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-list-check"></i> Institute tasks</a>
+		<a id="institute" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-graduation-cap"></i> Institute</a>
+		<a id="books" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book-open-reader"></i> books</a>
+
+	</nav>
+
+
+	<script>
+
+		let direction = "horizontal";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'personal')
+				window.open("https://www.notion.so/personal-e62dd50fdef94c97b545431a20d78b07", '_blank').focus();
+			
+			else if (id == 'daily planning')
+				window.open("https://www.notion.so/daily-planning-29cd534d9b9d4552bdc0b58655c13561", '_blank').focus();
+
+			else if (id == 'greek psychology')
+				window.open("https://www.notion.so/d466ed5d14494af2b08e271ac58937e1?v=d0f2678b61d14d94b62a2e1332963309", '_blank').focus();
+
+			else if (id == 'institute tasks')
+				window.open("https://www.notion.so/institute-tasks-fdbecf946f494166a2f3eb05184db7c8", '_blank').focus();
+
+			else if (id == 'institute')
+				window.open("https://www.notion.so/institute-ae6fd52f68254ae58d97ed80f8aa1991", '_blank').focus();
+
+			else if (id == 'books')
+				window.open("https://www.notion.so/4f60075c2b4447bb98423bba4ee428c8?v=6218b7ede371455ba36de531811c6750", '_blank').focus();
+
+		}
+	</script>
+
+
+</body>
+
+</html>
